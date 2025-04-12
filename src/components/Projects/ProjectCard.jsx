@@ -1,8 +1,7 @@
-// ProjectCard.jsx
 import React, { useState } from 'react';
 import bannerImg from "../../assets/projects.png";
 
-const ProjectCard = ({ title, main }) => {
+const ProjectCard = ({ title, main, demoLink, codeLink }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -16,13 +15,17 @@ const ProjectCard = ({ title, main }) => {
             )}
         </p>
         <div className='mt-4 p-2 flex justify-center gap-4'>
-            <button className='text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 
-            hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl 
-            bg-[#465697]'>Demo</button>
+            <a href={demoLink} target="_blank" rel="noopener noreferrer">
+              <button className='text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 
+              hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl 
+              bg-[#465697]'>Demo</button>
+            </a>
 
-            <button className='text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 
-            hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl 
-            bg-[#465697]'>Source Code</button>
+            <a href={codeLink} target="_blank" rel="noopener noreferrer">
+              <button className='text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 
+              hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl 
+              bg-[#465697]'>Source Code</button>
+            </a>
         </div>
     </div>
   );
