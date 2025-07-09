@@ -68,7 +68,7 @@ const Contact = () => {
           </li>
           <li className='flex items-center gap-2'>
             <MdPhone size={20} />
-            <span>+91 9876543210</span>
+            <span>+91 7393988808</span>
           </li>
           <li className='flex items-center gap-2'>
             <MdLocationOn size={20} />
