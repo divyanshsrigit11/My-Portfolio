@@ -2,7 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
 
-*{
-    scroll-behavior: smooth;
+/* Ensure full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔆 Cursor spotlight glow */
+body {
+  background: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      rgba(255, 255, 255, 0.15),
+      transparent 70%
+    ),
+    #171d32;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-position 0.1s ease;
+}
+
+.nav-item {
+  @apply px-4 py-2 text-sm md:text-base transition-all duration-300 cursor-pointer hover:text-blue-400;
+}
+
+.hoverable {
+  @apply inline-block transition-all duration-300 cursor-pointer hover:underline underline-offset-4 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-400 hover:to-violet-500;
 }

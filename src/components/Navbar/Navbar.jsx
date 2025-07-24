@@ -1,42 +1,60 @@
-import { RiCloseLine, RiMenu2Line } from '@remixicon/react';
 import React, { useState } from 'react';
+import { RiCloseLine, RiMenu2Line } from '@remixicon/react';
 
 const Navbar = () => {
-  const [menu,openMenu] = useState(false);
-  const [showMenu,setShowmenu] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleNavLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <nav className='flex flex-wrap justify-between md:items-center text-white px-10 pt-6 md:px-20'>
-    <span className='text-xl font-bold tracking-wide'>Divyansh Srivastava</span>
-    
-    <ul className={`$(menu ? "black": "hidden")  
-    mx-24 py-2 mt-4 font-semibold md:mt-5 bg-black px-2 rounded-xl bg-opacity-30 md:border-none 
-    text-center md:bg-transparent md:static md:mx-0 md:flex gap-6`}>
+    <nav className="w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-[#171d32]/80 border-b border-white/10 shadow-md">
+      <div className="flex items-center justify-between px-6 md:px-20 py-4 text-white relative">
+        {/* Logo */}
+        <span className="text-2xl font-extrabold tracking-tight hover:tracking-widest transition-all duration-300 cursor-pointer whitespace-nowrap">
+          Divyansh Srivastava
+        </span>
 
-      <a href="#About">
-        <li className='text-md transition-all duration-300 p-1 md:p-0'>About</li>
-      </a>
-      <a href="#Experience">
-        <li className='text-md transition-all duration-300 p-1 md:p-0'>Experience</li>
-      </a>
-      <a href="#Projects">
-        <li className='text-md transition-all duration-300 p-1 md:p-0'>Projects</li>
-      </a>
-      <a href="#Contact">
-        <li className='text-md transition-all duration-300 p-1 md:p-0'>Contacts</li>
-      </a>
-    </ul>
-    {showMenu ? (
-      <RiMenu2Line sixe={30} className='md:hidden absolute right-10 top-6 transition-all duration-300' 
-      onClick={() => {
-        openMenu(!menu); 
-        setShowmenu(!showMenu);}} />
-    ) : (
-    <RiCloseLine size={30} 
-    className='md:hidden absolute right-10 top-6 transition-all duration-300' />
+        {/* Hamburger Icon */}
+        <div className="md:hidden z-30">
+          {menuOpen ? (
+            <RiCloseLine
+              size={30}
+              className="cursor-pointer text-white hover:text-blue-400"
+              onClick={() => setMenuOpen(false)}
+            />
+          ) : (
+            <RiMenu2Line
+              size={30}
+              className="cursor-pointer text-white hover:text-blue-400"
+              onClick={() => setMenuOpen(true)}
+            />
+          )}
+        </div>
 
-    )}
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex gap-10 font-semibold">
+          <li><a href="#About" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>About</a></li>
+          <li><a href="#Experience" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>Experience</a></li>
+          <li><a href="#Projects" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>Projects</a></li>
+          <li><a href="#Contact" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>Contact</a></li>
+        </ul>
+      </div>
+
+      {/* Mobile Nav */}
+      <ul
+        className={`md:hidden fixed top-16 left-0 w-full bg-[#0f1323]/95 border-t border-white/10 py-6 flex flex-col items-center gap-6 font-semibold transition-transform duration-300 ${
+          menuOpen ? 'translate-y-0 opacity-100' : '-translate-y-[200%] opacity-0'
+        } z-20 text-white`}
+      >
+        <li><a href="#About" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>About</a></li>
+        <li><a href="#Experience" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>Experience</a></li>
+        <li><a href="#Projects" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>Projects</a></li>
+        <li><a href="#Contact" className="hover:text-blue-400 transition" onClick={handleNavLinkClick}>Contact</a></li>
+      </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;
