@@ -7,6 +7,14 @@ const Projects = () => {
       <h1 className='text-2xl md:text-4xl font-bold'>Projects</h1>
 
       <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+
+        <ProjectCard 
+          title="SpellBound - AI Background Remover" 
+          main="SpellBound is a full-stack AI-powered SaaS application that allows users to instantly remove backgrounds from images with high precision. Designed with a credit-based system, users receive free credits upon signing up and can purchase additional top-ups via a secure payment gateway. The app features a seamless, responsive user interface and a robust backend to handle image processing and transaction management. Built using React, Node.js, Clerk (Auth), and Razorpay." 
+          demoLink="https://spell-bound-bg-remover-zpl6.vercel.app/" 
+          codeLink="https://github.com/divyanshsrigit11/SpellBound-BG-Remover"
+        />
+
         <ProjectCard 
           title="Flick Mania" 
           main="This Movie Search Website is a dynamic platform built to showcase popular and trending movies. Developed with a clean and responsive design, 
@@ -31,14 +39,6 @@ const Projects = () => {
           and up-to-date news delivery." 
           demoLink="https://darpan-admin-web.vercel.app/"
           codeLink="https://github.com/divyanshsrigit11/Darpan-AdminWeb"
-        />
-
-        <ProjectCard 
-          title="Tic-Tac-Toe Game" 
-          main="A web-based Tic Tac Toe game developed using HTML, CSS, and JavaScript. It offers a clean, responsive interface where two players can compete, 
-          with dynamic updates reflecting the game state and determining the winner." 
-          demoLink="https://tic-tac-toe-game-beryl-ten.vercel.app/"
-          codeLink="https://github.com/divyanshsrigit11/TIC-TAC-TOE-Game"
         />
       </div>
     </div>

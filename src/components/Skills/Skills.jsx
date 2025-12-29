@@ -8,7 +8,9 @@ import {
   FaJava,
   FaDatabase,
   FaCuttlefish,
-  FaGitAlt
+  FaGitAlt,
+  FaPython,
+  FaAws
 } from 'react-icons/fa';
 import {
   SiMongodb,
@@ -16,7 +18,13 @@ import {
   SiSpringboot,
   SiDotnet,
   SiPostman,
-  SiMysql
+  SiMysql,
+  SiNextdotjs,
+  SiVercel,
+  SiNetlify,
+  SiClerk,
+  SiJsonwebtokens,
+  SiOpenai
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -35,6 +43,7 @@ const Skills = () => {
           <SkillItem icon={<FaJava color="#007396" size={40} />} label="Java" />
           <SkillItem icon={<span className="text-xl font-bold">C</span>} label="C" />
           <SkillItem icon={<span className="text-xl font-bold">C++</span>} label="C++" />
+          <SkillItem icon={<span className="text-xl font-bold">Python</span>} label="" />
         </SkillCategory>
 
         {/* Web Development */}
@@ -43,6 +52,7 @@ const Skills = () => {
           <SkillItem icon={<FaCss3 color="#1572B6" size={40} />} label="CSS" />
           <SkillItem icon={<FaJs color="#F7DF1E" size={40} />} label="JavaScript" />
           <SkillItem icon={<FaReact color="#61DAFB" size={40} />} label="React.js" />
+          <SkillItem icon={<SiNextdotjs className="text-black dark:text-white" size={40} />} label="Next.js" />
           <SkillItem icon={<FaNodeJs color="#83CD29" size={40} />} label="Node.js" />
           <SkillItem icon={<SiExpress color="#FFFFFF" size={40} />} label="Express.js" />
           <SkillItem icon={<SiDotnet color="#512BD4" size={40} />} label="ASP.NET" />
@@ -65,8 +75,20 @@ const Skills = () => {
           <SkillItem icon={<FaDatabase color="#F29111" size={40} />} label="SQL Server" />
         </SkillCategory>
 
-        {/* API Testing */}
-        <SkillCategory title="API Testing">
+        {/* Tools & Platforms (New Section) */}
+        <SkillCategory title="Tools & Platforms">
+          {/* Deployment */}
+          <SkillItem icon={<SiVercel className="text-black dark:text-white" size={40} />} label="Vercel" />
+          <SkillItem icon={<SiNetlify color="#00C7B7" size={40} />} label="Netlify" />
+          
+          {/* Auth */}
+          <SkillItem icon={<SiClerk color="#6C47FF" size={40} />} label="Clerk" />
+          <SkillItem icon={<SiJsonwebtokens color="#D63AFF" size={40} />} label="JWT" />
+          
+          {/* AI */}
+          <SkillItem icon={<SiOpenai className="text-black dark:text-white" size={40} />} label="OpenAI" />
+          
+          {/* Testing */}
           <SkillItem icon={<SiPostman color="#FF6C37" size={40} />} label="Postman" />
         </SkillCategory>
       </div>
