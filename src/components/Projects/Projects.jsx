@@ -10,9 +10,27 @@ const Projects = () => {
 
         <ProjectCard 
           title="SpellBound - AI Background Remover" 
-          main="SpellBound is a full-stack AI-powered SaaS application that allows users to instantly remove backgrounds from images with high precision. Designed with a credit-based system, users receive free credits upon signing up and can purchase additional top-ups via a secure payment gateway. The app features a seamless, responsive user interface and a robust backend to handle image processing and transaction management. Built using React, Node.js, Clerk (Auth), and Razorpay." 
+          main="SpellBound is a full-stack AI-powered SaaS application that allows users to instantly 
+          remove backgrounds from images with high precision. Designed with a credit-based system, 
+          users receive free credits upon signing up and can purchase additional top-ups via a secure payment gateway. 
+          The app features a seamless, responsive user interface and a robust backend to handle image processing and 
+          transaction management. Built using React, Node.js, Clerk (Auth), and Razorpay." 
           demoLink="https://spell-bound-bg-remover-zpl6.vercel.app/" 
           codeLink="https://github.com/divyanshsrigit11/SpellBound-BG-Remover"
+        />
+
+        <ProjectCard 
+          title="SpellBound - AI Background Remover" 
+          main="A dynamic full-stack content management system that empowers users to 
+          create, publish, and interact with articles across various categories. Designed 
+          with a secure authentication architecture, the platform features a responsive 
+          interface for seamless reading and writing experiences. It includes robust 
+          functionality for image uploading, category-based filtering, and real-time 
+          interactive commenting, supported by a scalable backend handles complex data 
+          relationships and media storage. Tech Stack: React.js, Material UI (MUI), Context API, Node.js, Express.js, JWT, Bcrypt, 
+          MongoDB (Mongoose), GridFS" 
+          demoLink="https://blog-client-seven-omega.vercel.app/" 
+          codeLink="https://github.com/divyanshsrigit11/Blog"
         />
 
         <ProjectCard 
