@@ -20,7 +20,7 @@ const Projects = () => {
         />
 
         <ProjectCard 
-          title="SpellBound - AI Background Remover" 
+          title="Blog Platform" 
           main="A dynamic full-stack content management system that empowers users to 
           create, publish, and interact with articles across various categories. Designed 
           with a secure authentication architecture, the platform features a responsive 
